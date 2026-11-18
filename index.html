@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Quiz de Tecnologia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="wheel" aria-label="Roleta de categorias">
+      <svg id="disc" class="wheel__disc" viewBox="-100 -100 200 200" aria-hidden="true"></svg>
+
+      <svg class="wheel__ring" viewBox="-110 -110 220 220" aria-hidden="true">
+        <circle class="ring__base" r="104"/>
+        <circle class="ring__line" r="104"/>
+        <path class="ring__pointer" d="M-14 -112 L14 -112 L0 -84 Z"/>
+      </svg>
+
+      <button id="spin-button" class="wheel__spin" type="button" aria-label="Girar a roleta">
+        <i></i>
+      </button>
+    </section>
+
+    <section class="panel">
+      <div id="banner" class="banner">Teste seu conhecimento!</div>
+
+      <div id="question" class="card">Pressione o botão do meio da roleta</div>
+
+      <div id="options" class="options" hidden></div>
+
+      <div id="difficulty" class="difficulty" hidden>
+        <span>Dificuldade:</span>
+        <b id="difficulty-name"></b>
+        <span class="difficulty__pips" aria-hidden="true"><i></i><i></i><i></i></span>
+      </div>
+
+      <div id="message" class="message" role="status"></div>
+
+      <button id="next-button" class="next" type="button" hidden>Rodar roleta novamente</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
